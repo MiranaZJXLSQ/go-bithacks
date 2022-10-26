@@ -1,7 +1,7 @@
 package go_bithacks
 
-// NextTwoPowerOfInt32 获取下一个大于等于一个int32的2的幂
-func NextTwoPowerOfInt32(x int32) int32 {
+// NextPowerOfTwoInt32 获取下一个大于等于一个int32的2的幂
+func NextPowerOfTwoInt32(x int32) int32 {
 	x--
 	x |= x >> 1
 	x |= x >> 2
@@ -12,8 +12,8 @@ func NextTwoPowerOfInt32(x int32) int32 {
 	return x
 }
 
-// NextTwoPowerOfInt64 获取下一个大于等于一个int64的2的幂
-func NextTwoPowerOfInt64(x int64) int64 {
+// NextPowerOfTwoInt64 获取下一个大于等于一个int64的2的幂
+func NextPowerOfTwoInt64(x int64) int64 {
 	x--
 	x |= x >> 1
 	x |= x >> 2
