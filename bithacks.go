@@ -24,3 +24,13 @@ func NextPowerOfTwoInt64(x int64) int64 {
 	x++
 	return x
 }
+
+// DetectTwoIntegerOppositeSign 检查两个int32是否符号相反
+func DetectTwoIntegerOppositeSign(x, y int32) bool {
+	return (x ^ y) < 0
+}
+
+// DetectTwoIntegerSameSign 检查两个int32是否符号相同
+func DetectTwoIntegerSameSign(x, y int32) bool {
+	return (x ^ y) >= 0
+}
