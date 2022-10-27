@@ -34,3 +34,13 @@ func DetectTwoIntegerOppositeSign(x, y int32) bool {
 func DetectTwoIntegerSameSign(x, y int32) bool {
 	return (x ^ y) >= 0
 }
+
+// AbsoluteValueOfInt32 求一个int32的绝对值
+func AbsoluteValueOfInt32(x int32) int32 {
+	return x ^ (x >> 31) - (x >> 31)
+}
+
+// AbsoluteValueOfInt64 求一个int64的绝对值
+func AbsoluteValueOfInt64(x int64) int64 {
+	return x ^ (x >> 63) - (x >> 63)
+}
