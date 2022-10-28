@@ -45,12 +45,22 @@ func AbsoluteValueOfInt64(x int64) int64 {
 	return x ^ (x >> 63) - (x >> 63)
 }
 
-// MinOfTwoInt32 找到两个int32中最小的那个
+// MinOfTwoInt32 找到两个int32中较小的那个
 func MinOfTwoInt32(x, y int32) int32 {
 	return y + ((x - y) & ((x - y) >> 31))
 }
 
-// MinOfTwoInt64 找到两个int64中最小的那个
+// MinOfTwoInt64 找到两个int64中较小的那个
 func MinOfTwoInt64(x, y int64) int64 {
 	return y + ((x - y) & ((x - y) >> 63))
+}
+
+// MaxOfTwoInt32 找到两个int32中较大的那个
+func MaxOfTwoInt32(x, y int32) int32 {
+	return x - ((x - y) & ((x - y) >> 31))
+}
+
+// MaxOfTwoInt64 找到两个int64中较大的那个
+func MaxOfTwoInt64(x, y int64) int64 {
+	return x - ((x - y) & ((x - y) >> 63))
 }
