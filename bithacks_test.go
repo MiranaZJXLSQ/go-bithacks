@@ -24,3 +24,18 @@ func TestAbsoluteValueOfInt32(t *testing.T) {
 		t.Log(AbsoluteValueOfInt64(v))
 	}
 }
+
+func TestMinOfTwoInt32(t *testing.T) {
+	var int32cases [][]int32
+	int32cases = append(int32cases, []int32{1, -1})
+	int32cases = append(int32cases, []int32{1, 2})
+	for _, v := range int32cases {
+		t.Log(MinOfTwoInt32(v[0], v[1]))
+	}
+	var int64cases [][]int64
+	int64cases = append(int64cases, []int64{1, -1})
+	int64cases = append(int64cases, []int64{1, 2})
+	for _, v := range int64cases {
+		t.Log(MinOfTwoInt64(v[0], v[1]))
+	}
+}
