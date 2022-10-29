@@ -64,3 +64,8 @@ func MaxOfTwoInt32(x, y int32) int32 {
 func MaxOfTwoInt64(x, y int64) int64 {
 	return x - ((x - y) & ((x - y) >> 63))
 }
+
+// CheckInt32PowerOfTwo 检查数字是不是2的幂
+func CheckInt32PowerOfTwo(x int32) bool {
+	return (x & (x - 1)) == 0
+}
