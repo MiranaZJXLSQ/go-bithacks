@@ -69,3 +69,12 @@ func MaxOfTwoInt64(x, y int64) int64 {
 func CheckInt32PowerOfTwo(x int32) bool {
 	return (x & (x - 1)) == 0
 }
+
+// CountBitsSet 计算uint32中位数为1的数量
+func CountBitsSet(x uint32) uint32 {
+	var r uint32
+	for ; x > 0; x >>= 1 {
+		r += x & 1
+	}
+	return r
+}

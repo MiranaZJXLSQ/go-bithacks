@@ -53,3 +53,15 @@ func TestCheckInt32PowerOfTwo(t *testing.T) {
 		t.Log(CheckInt32PowerOfTwo(v))
 	}
 }
+
+func TestCountBitsSet(t *testing.T) {
+	var cases []uint32
+	cases = append(cases, 1)
+	cases = append(cases, 2)
+	cases = append(cases, 3)
+	cases = append(cases, 4)
+	cases = append(cases, 5)
+	for _, v := range cases {
+		t.Log(CountBitsSet(v))
+	}
+}
