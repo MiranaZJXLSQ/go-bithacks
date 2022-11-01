@@ -78,3 +78,12 @@ func CountBitsSet(x uint32) uint32 {
 	}
 	return r
 }
+
+// ComputingParity uint32的二进制中1的数量是否为奇数
+func ComputingParity(x uint32) bool {
+	var flag bool
+	for ; x > 0; x = x & (x - 1) {
+		flag = !flag
+	}
+	return flag
+}

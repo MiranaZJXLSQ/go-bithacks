@@ -65,3 +65,15 @@ func TestCountBitsSet(t *testing.T) {
 		t.Log(CountBitsSet(v))
 	}
 }
+
+func TestComputingParity(t *testing.T) {
+	var cases []uint32
+	cases = append(cases, 1)
+	cases = append(cases, 2)
+	cases = append(cases, 3)
+	cases = append(cases, 4)
+	cases = append(cases, 5)
+	for _, v := range cases {
+		t.Log(ComputingParity(v))
+	}
+}
