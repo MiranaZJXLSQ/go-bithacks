@@ -1,5 +1,9 @@
 package go_bithacks
 
+import (
+	"math/bits"
+)
+
 // NextPowerOfTwoInt32 获取下一个大于等于一个int32的2的幂
 func NextPowerOfTwoInt32(x int32) int32 {
 	x--
@@ -86,4 +90,16 @@ func ComputingParity(x uint32) bool {
 		flag = !flag
 	}
 	return flag
+}
+
+// ReverseBits uint位反转
+func ReverseBits(x uint) uint {
+	r, s := x, bits.UintSize-1
+	for x = x >> 1; x > 0; x >>= 1 {
+		r <<= 1
+		r |= x & 1
+		s--
+	}
+	r <<= s
+	return r
 }

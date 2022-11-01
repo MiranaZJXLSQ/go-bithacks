@@ -1,6 +1,9 @@
 package go_bithacks
 
-import "testing"
+import (
+	"math/bits"
+	"testing"
+)
 
 func TestDetectTwoIntegerOppositeSign(t *testing.T) {
 	var cases [][]int32
@@ -75,5 +78,18 @@ func TestComputingParity(t *testing.T) {
 	cases = append(cases, 5)
 	for _, v := range cases {
 		t.Log(ComputingParity(v))
+	}
+}
+
+func TestReverseBits(t *testing.T) {
+	var cases []uint
+	cases = append(cases, 1)
+	cases = append(cases, 2)
+	cases = append(cases, 3)
+	cases = append(cases, 4)
+	cases = append(cases, 5)
+	for _, v := range cases {
+		t.Log(ReverseBits(v))
+		t.Log(bits.Reverse(v))
 	}
 }
