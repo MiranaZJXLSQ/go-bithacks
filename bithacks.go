@@ -75,6 +75,7 @@ func CheckInt32PowerOfTwo(x int32) bool {
 }
 
 // CountBitsSet 计算uint32中位数为1的数量
+// 这个又叫做 hammingWeight -- LT 191
 func CountBitsSet(x uint32) uint32 {
 	var r uint32
 	for ; x > 0; x >>= 1 {
