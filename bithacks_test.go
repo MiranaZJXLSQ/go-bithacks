@@ -93,3 +93,27 @@ func TestReverseBits(t *testing.T) {
 		t.Log(bits.Reverse(v))
 	}
 }
+
+func TestUpperCaseToLowerCase(t *testing.T) {
+	var cases []rune
+	cases = append(cases, 'A')
+	cases = append(cases, 'B')
+	cases = append(cases, 'C')
+	cases = append(cases, 'D')
+	cases = append(cases, 'E')
+	for _, v := range cases {
+		t.Logf("origin %c, transfered %c", v, UpperCaseToLowerCase(v))
+	}
+}
+
+func TestLowerCaseToUpperCase(t *testing.T) {
+	var cases []rune
+	cases = append(cases, 'a')
+	cases = append(cases, 'b')
+	cases = append(cases, 'c')
+	cases = append(cases, 'd')
+	cases = append(cases, 'e')
+	for _, v := range cases {
+		t.Logf("origin %c, transfered %c", v, LowerCaseToUpperCase(v))
+	}
+}

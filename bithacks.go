@@ -104,3 +104,13 @@ func ReverseBits(x uint) uint {
 	r <<= s
 	return r
 }
+
+// UpperCaseToLowerCase 大写英文字母转小写
+func UpperCaseToLowerCase(x rune) rune {
+	return x | ' '
+}
+
+// LowerCaseToUpperCase 小写英文字母转大写
+func LowerCaseToUpperCase(x rune) rune {
+	return x & '_'
+}
