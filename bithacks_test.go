@@ -117,3 +117,19 @@ func TestLowerCaseToUpperCase(t *testing.T) {
 		t.Logf("origin %c, transfered %c", v, LowerCaseToUpperCase(v))
 	}
 }
+
+func TestClearBitsFromLSBToIthBit(t *testing.T) {
+	var cases []int
+	cases = append(cases, 29)
+	for _, v := range cases {
+		t.Log(ClearBitsFromLSBToIthBit(v, 3))
+	}
+}
+
+func TestClearBitsFromMSBToIthBit(t *testing.T) {
+	var cases []int
+	cases = append(cases, 215)
+	for _, v := range cases {
+		t.Log(ClearBitsFromMSBToIthBit(v, 4))
+	}
+}

@@ -114,3 +114,15 @@ func UpperCaseToLowerCase(x rune) rune {
 func LowerCaseToUpperCase(x rune) rune {
 	return x & '_'
 }
+
+// ClearBitsFromLSBToIthBit 清除从i到isb的bit位
+func ClearBitsFromLSBToIthBit(x int, i int) int {
+	mask := ^((1 << (i + 1)) - 1)
+	return x & mask
+}
+
+// ClearBitsFromMSBToIthBit 清除从msb到i的bit位
+func ClearBitsFromMSBToIthBit(x int, i int) int {
+	mask := (1 << i) - 1
+	return x & mask
+}
