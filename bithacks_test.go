@@ -101,6 +101,7 @@ func TestUpperCaseToLowerCase(t *testing.T) {
 	cases = append(cases, 'C')
 	cases = append(cases, 'D')
 	cases = append(cases, 'E')
+	cases = append(cases, 'F')
 	for _, v := range cases {
 		t.Logf("origin %c, transfered %c", v, UpperCaseToLowerCase(v))
 	}
@@ -113,6 +114,7 @@ func TestLowerCaseToUpperCase(t *testing.T) {
 	cases = append(cases, 'c')
 	cases = append(cases, 'd')
 	cases = append(cases, 'e')
+	cases = append(cases, 'f')
 	for _, v := range cases {
 		t.Logf("origin %c, transfered %c", v, LowerCaseToUpperCase(v))
 	}
