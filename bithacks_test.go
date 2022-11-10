@@ -76,6 +76,7 @@ func TestComputingParity(t *testing.T) {
 	cases = append(cases, 3)
 	cases = append(cases, 4)
 	cases = append(cases, 5)
+	cases = append(cases, 6)
 	for _, v := range cases {
 		t.Log(ComputingParity(v))
 	}
@@ -88,6 +89,7 @@ func TestReverseBits(t *testing.T) {
 	cases = append(cases, 3)
 	cases = append(cases, 4)
 	cases = append(cases, 5)
+	cases = append(cases, 6)
 	for _, v := range cases {
 		t.Log(ReverseBits(v))
 		t.Log(bits.Reverse(v))
